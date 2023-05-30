@@ -1,0 +1,5 @@
+openai
+streamlit~=1.22.0
+notionai-py
+translate~=3.6.1
+langchain~=0.0.170
