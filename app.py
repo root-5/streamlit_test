@@ -47,11 +47,6 @@ if submit and user_topic and "cloudseed" == input_password:
         # '''
         prompt = f'''
         私は{user_like}が好きで、{user_experience}などを経験したことがあるのですが、私におすすめな{user_topic}はありますか？
-
-        # Response Format
-        *提案する個数は5つ
-        *回答はマークダウン形式
-        *回答は日本語
         '''
 
         # APIアクセス
@@ -59,9 +54,9 @@ if submit and user_topic and "cloudseed" == input_password:
             model="gpt-3.5-turbo",
             messages=[
                 # {"role": "system", "content": "あなたはuserの相談にのるuserの友人です。userの相談に対して日本語かつマークダウン形式で回答してください。"},
-                {"role": "user", "content": user_topic}
+                {"role": "user", "content": prompt}
             ]
         )
 
-    prompt = response["choices"][0]["message"]["content"]
-    st.write(prompt)
+    answer = response["choices"][0]["message"]["content"]
+    st.write(answer)
