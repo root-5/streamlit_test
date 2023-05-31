@@ -18,17 +18,16 @@ with st.form("form"):
     # 年齢入力欄
     user_age = st.text_input('年齢を記入してください')
     # 好きなこと入力欄
-    user_like = st.text_input('好きなことを記入してください（ex.ギター演奏、本を読むこと、旅行）')
-    # 部活・習い事などの経験入力欄
-    user_experience = st.text_input('部活・習い事など、今まで経験したことを記入してください（ex.サッカー部、飲食業）')
+    user_like = st.text_input('好きなことを記入してください（ex.本を読むこと、旅行）')
+    # 部活・職歴などの経験入力欄
+    user_experience = st.text_input('部活・職歴など、今まで経験したことを記入してください（ex.サッカー部、飲食業）')
 
     # 作成ボタン
     submit = st.form_submit_button("作成")
 
 
 # inputに内容があり、作成ボタンを押した際に出力する
-# if submit and user_topic and "cloudseed" == input_password:
-if submit and user_topic and "" == input_password:
+if submit and user_topic and "cloudseed" == input_password:
     with st.spinner('回答を作成中......'):
 
         # プロンプトの生成
