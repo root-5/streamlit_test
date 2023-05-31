@@ -3,6 +3,7 @@ import openai
 
 # 初期設定
 openai_api_key = st.secrets['api_key']
+openai.api_key = openai_api_key
 
 
 # タイトル出力
